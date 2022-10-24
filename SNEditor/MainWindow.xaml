@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SNEditor"
+        xmlns:editors="clr-namespace:SNEditor.Editors"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="SNEditor" Height="450" Width="800">
+        Title="SNEditor" Height="1000" Width="1900">
     <Grid>
-        
+        <editors:WorldEditorView/>
     </Grid>
 </Window>
