@@ -22,6 +22,7 @@ namespace SNEditor.GameProject
         public ProjectBrowserDialog()
         {
             InitializeComponent();
+            Focus();
         }
 
         private void OnToggleButton_Click(object sender, RoutedEventArgs e)
