@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Windows.Shapes;
 
 namespace SNEditor.GameProject
 {
@@ -92,7 +93,8 @@ namespace SNEditor.GameProject
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO : LOG ERRORS
+                Logger.Log(MessageType.Error, $"Failed to read project data");
+                throw;
             }
         }
     }

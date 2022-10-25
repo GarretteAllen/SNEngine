@@ -22,7 +22,8 @@ namespace SNEditor.Utilities
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO PROPER LOGGING OUTSIDE VS
+                Logger.Log(MessageType.Error, $"Failed to serialize {instance} to {path}");
+                throw;
             }
         }
 
@@ -38,8 +39,8 @@ namespace SNEditor.Utilities
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO PROPER LOGGING OUTSIDE VS
-                return default;
+                Logger.Log(MessageType.Error, $"Failed to deserialize {path}");
+                throw;
             }
         }
     }

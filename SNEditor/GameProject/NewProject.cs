@@ -158,8 +158,8 @@ namespace SNEditor.GameProject
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO LOG BETTER
-                return string.Empty;
+                Logger.Log(MessageType.Error, $"Failed to create {ProjectName}");
+                throw;
             }
         }
         public NewProject()
@@ -184,7 +184,8 @@ namespace SNEditor.GameProject
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                //TODO: LOG ERRORS PROPERLY OUTSIDE OF VS
+                Logger.Log(MessageType.Error, $"Failed to read project template");
+                throw;
             }
         }
     }
