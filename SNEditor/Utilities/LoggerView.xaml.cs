@@ -21,12 +21,6 @@ namespace SNEditor.Utilities
         public LoggerView()
         {
             InitializeComponent();
-            Loaded += (s, e) =>
-            {
-                Logger.Log(MessageType.Info, "Info Message");
-                Logger.Log(MessageType.Warning, "Warning message");
-                Logger.Log(MessageType.Error, "Error Message");
-            };
         }
 
         private void OnClear_Button_Click(object sender, RoutedEventArgs e)

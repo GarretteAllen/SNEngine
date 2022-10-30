@@ -13,7 +13,7 @@ using System.Windows.Input;
 namespace SNEditor.GameProject
 {
     [DataContract(Name = "Game")]
-    public class Project : ViewModelBase
+    class Project : ViewModelBase
     {
         public static string Extension { get; } = ".sne";
         [DataMember]
