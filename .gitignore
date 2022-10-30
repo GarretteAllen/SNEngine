@@ -55,3 +55,7 @@ dkms.conf
 .vs/
 /SNEditor/bin/*
 /SNEditor/obj/*
+/SNEngine/x64/
+*.tlog
+*.log
+*.recipe
