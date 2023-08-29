@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath>C:\Users\garal\source\repos\SNEngine\build\</BaseOutputPath>
   </PropertyGroup>
 
 </Project>
