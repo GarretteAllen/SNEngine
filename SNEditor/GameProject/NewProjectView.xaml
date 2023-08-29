@@ -15,8 +15,10 @@
     <UserControl.DataContext>
         <local:NewProject/>
     </UserControl.DataContext>
-    <StackPanel Background="White">
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+    <Border CornerRadius="3" Background="{StaticResource Editor.Window.GrayBrush3}" Width="700"
+            HorizontalAlignment="Center" Margin="0,30">
+        <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
             <ListBox Width="195" Height="250" ItemsSource="{Binding ProjectTemplates}" x:Name="templateListBox"
                      SelectedIndex="0">
                 <ListBox.ItemTemplate>
@@ -35,11 +37,11 @@
             </Border>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
-            <TextBlock Text="Name" Width="50"/>
+            <TextBlock Text="Name" Width="50" Style="{StaticResource LightTextBlockStyle}"/>
             <TextBox Width="550" Text="{Binding ProjectName, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0">
-            <TextBlock Text="Path" Width="50"/>
+            <TextBlock Text="Path" Width="50" Style="{StaticResource LightTextBlockStyle}"/>
             <TextBox Width="500" Text="{Binding ProjectPath, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Content="Browse" Width="45" Margin="5,0,0,0"/>
         </StackPanel>
@@ -48,6 +50,8 @@
                     Click="OnCreate_Button_Click"/>
             <Button Content="Exit" Width="96" Margin="30,0,0,0" IsCancel="True"/>
         </StackPanel>
-        <TextBlock Text="{Binding ErrorMsg}" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+        <TextBlock Text="{Binding ErrorMsg}" Foreground="{StaticResource Editor.RedBrush}"
+                   Margin="0,10,0,0" HorizontalAlignment="Center"/>
     </StackPanel>
+    </Border>
 </UserControl>

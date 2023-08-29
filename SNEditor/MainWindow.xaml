@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:SNEditor"
         xmlns:editors="clr-namespace:SNEditor.Editors"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="SNEditor" Height="720" Width="1280">
+        Title="SNEditor" Height="720" Width="1280"
+        Style="{StaticResource SNWindowStyle}">
     <Grid>
         <editors:WorldEditorView/>
     </Grid>
